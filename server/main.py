@@ -2,8 +2,6 @@ import socket
 import return_color
 from simple_websocket_server import WebSocketServer,WebSocket
 from threading import Thread
-
-
 connected_clients = []
 
 class SocketServer(WebSocket):
@@ -28,7 +26,12 @@ def NotifySocketTCP():
     SOCKET.listen()
 
     while True:
-  
+        """
+
+            accept socket and fire to all connected clients of new 
+            wallpaper colour change
+        
+        """
         conn, addr = SOCKET.accept()
 
         color = return_color.main()
@@ -41,6 +44,5 @@ def NotifySocketTCP():
   
 
 server = WebSocketServer("127.0.0.1",9483,SocketServer)
-
 Thread(target=NotifySocketTCP).start()
 server.serve_forever()

@@ -15,7 +15,9 @@
 def linux_pywal():
 
     from json import loads as load_json
-    PYWAL_CONFIG_LOCATION = "/home/me/.cache/wal/colors.json"
+    from os import path
+
+    PYWAL_CONFIG_LOCATION = path.expanduser("~")+"/.cache/wal/colors.json"
         
     PYWAL_COLORS = open(PYWAL_CONFIG_LOCATION,"r")
     PYWAL_COLORS_DICT = load_json(PYWAL_COLORS.read())
@@ -35,5 +37,6 @@ def linux_pywal():
     return color_dict["PRIMARY_COLOR"] 
 
 def main():
+    # you could edit this to whatever function u want
     return linux_pywal()
     
