@@ -1,0 +1,209 @@
+{
+    "extension_description": {
+        "message": "Dunkles Design für jede Website. Schonen Sie Ihre Augen und verwenden Sie Dark Reader für die Nacht und das tägliche Surfen."
+    },
+    "loading_please_wait": {
+        "message": "Lädt, bitte warten"
+    },
+    "on": {
+        "message": "Ein"
+    },
+    "off": {
+        "message": "Aus"
+    },
+    "toggle_current_site": {
+        "message": "Aktuelle Seite umschalten"
+    },
+    "setup_hotkey_toggle_site": {
+        "message": "Hotkey zum Umschalten der\naktuellen Webseite einrichten"
+    },
+    "toggle_extension": {
+        "message": "Erweiterung"
+    },
+    "setup_hotkey_toggle_extension": {
+        "message": "Hotkey zum (de)aktivieren\nder Erweiterung"
+    },
+    "automation": {
+        "message": "Automatisierung"
+    },
+    "set_active_hours": {
+        "message": "Nutzungszeit ändern"
+    },
+    "set_location": {
+        "message": "Nach lokalem Sonnenuntergang aktivieren"
+    },
+    "longitude": {
+        "message": "Längengrad"
+    },
+    "latitude": {
+        "message": "Breitengrad"
+    },
+    "page_protected": {
+        "message": "Diese Seite ist durch\nden Browser geschützt"
+    },
+    "local_files_forbidden": {
+        "message": "Zugriff nicht erlaubt auf\nlokale Dateien"
+    },
+    "page_in_dark_list": {
+        "message": "Seite befindet sich auf der\nglobalen Dunkel-Liste"
+    },
+    "system_dark_mode": {
+        "message": "Systemfarben verwenden"
+    },
+    "system_dark_mode_description": {
+        "message": "Aktivieren, wenn das System dunkel ist"
+    },
+    "system_dark_mode_chromium_warning": {
+        "message": "Diese Funktion könnte vielleicht nicht, durch\neinen Bug in ihren Brower, funktionieren"
+    },
+    "filter": {
+        "message": "Filter"
+    },
+    "mode": {
+        "message": "Modus"
+    },
+    "dark": {
+        "message": "Dunkel"
+    },
+    "light": {
+        "message": "Hell"
+    },
+    "brightness": {
+        "message": "Helligkeit"
+    },
+    "contrast": {
+        "message": "Kontrast"
+    },
+    "grayscale": {
+        "message": "Graustufe"
+    },
+    "sepia": {
+        "message": "Sepia"
+    },
+    "only_for": {
+        "message": "Nur für"
+    },
+    "only_for_description": {
+        "message": "Einstellungen nur auf aktuelle Webseite anwenden"
+    },
+    "site_list": {
+        "message": "Webseiteliste"
+    },
+    "invert_listed_only": {
+        "message": "Nur aufgelistete invertieren"
+    },
+    "not_invert_listed": {
+        "message": "Nicht aufgelistete invertieren"
+    },
+    "add_site_to_list": {
+        "message": "Webseite zur Liste hinzufügen"
+    },
+    "setup_add_site_hotkey": {
+        "message": "Ein Hotkey zum Hinzufügen der Seite festlegen"
+    },
+    "more": {
+        "message": "Mehr"
+    },
+    "select_font": {
+        "message": "Schriftart auswählen"
+    },
+    "text_stroke": {
+        "message": "Textstärke"
+    },
+    "try_experimental_theme_engines": {
+        "message": "Probiere **experimentelle** Style-Engines aus:\n**Filter+** bewahrt die Farbsättigung, verwendet GPU\n**Statisches** generiert einfaches schnelles Design\n**Dynamisches Thema** analysiert Farben und Bilder"
+    },
+    "engine_filter": {
+        "message": "Filter"
+    },
+    "engine_filter_plus": {
+        "message": "Filter+"
+    },
+    "engine_static": {
+        "message": "Statisch"
+    },
+    "engine_dynamic": {
+        "message": "Dynamisch"
+    },
+    "theme_generation_mode": {
+        "message": "Them-Generierungsmodus"
+    },
+    "custom_browser_theme_on": {
+        "message": "Angepasst"
+    },
+    "custom_browser_theme_off": {
+        "message": "Standard"
+    },
+    "change_browser_theme": {
+        "message": "Ändere das Browserdesign"
+    },
+    "privacy": {
+        "message": "Datenschutz"
+    },
+    "help": {
+        "message": "Hilfe"
+    },
+    "donate": {
+        "message": "Spenden"
+    },
+    "news": {
+        "message": "Neuigkeiten"
+    },
+    "read_more": {
+        "message": "Weiterlesen"
+    },
+    "open_dev_tools": {
+        "message": "Erweitert"
+    },
+    "configure_automation": {
+        "message": "Automatisierung konfigurieren"
+    },
+    "auto_night_time": {
+        "message": "Automatisch (Nacht)"
+    },
+    "auto_day_time": {
+        "message": "Automatisch (tagsüber)"
+    },
+    "auto_night_at_location": {
+        "message": "Auto (Nacht am Standort)"
+    },
+    "auto_day_at_location": {
+        "message": "Auto (Tag vor Ort)"
+    },
+    "auto_system_is_dark": {
+        "message": "Auto (System ist dunkel)"
+    },
+    "auto_system_is_light": {
+        "message": "Auto (System ist hell)"
+    },
+    "click_to_set_shortcut": {
+        "message": "Klicken Sie, um die Verknüpfung festzulegen"
+    },
+    "extension_toggle_shortcut": {
+        "message": "Tastenkombination zum Ein-/Ausschalten der Erweiterung"
+    },
+    "configure_site_toggle": {
+        "message": "Websiteumschaltung konfigurieren"
+    },
+    "site_toggle": {
+        "message": "Site-Umschaltung"
+    },
+    "detect_dark_theme": {
+        "message": "Dunkles Thema erkennen"
+    },
+    "detect_website_dark_theme": {
+        "message": "Erkennen Sie das eigene dunkle Thema der Website"
+    },
+    "dark_theme_detected": {
+        "message": "Dunkles Design erkannt"
+    },
+    "website_toggle_shortcut": {
+        "message": "Tastenkombination zum Umschalten der Website"
+    },
+    "support_out_work": {
+        "message": "Unterstützen Sie unsere Arbeit"
+    },
+    "store_listing": {
+        "message": "Zum Schutz der Augen ermöglicht diese Erweiterung das Erstellen dunkler Farblayouts für Webseiten. Dabei invertiert Dark Reader helle Farben, macht sie kontrastreich und nachts gut lesbar.\n\nHelligkeit, Kontrast, Sepia-Filter, Dark-Modus, Schrifteinstellungen und Ignorier-Liste können manuell verwaltet und individuell eingestellt werden.\n\nKönnten wir Sie bitten, die Appentwicklung mit einer Spende zu unterstützen? Möglicherweise sehen Sie im Einstellungs-Popup Neuigkeiten über Dark Reader. Es gibt Entwicklertools für erfahrene Benutzer.\n\nDark Reader zeigt dabei keine Werbung oder sendet Benutzerdaten irgendwohin. Es ist komplett quelloffen: https://github.com/darkreader/darkreader.\n\nDeaktivieren Sie vor der Installation ähnliche Erweiterungen. Genieße das Zusehen!"
+    }
+}
