@@ -72,3 +72,7 @@ idk how you guys configure your wallpapers so i've decided that you'd need to ma
 wraper.py positional arguments:
 
 {color index} {wallpapr location}
+
+.. or if you wan to take account for all colors
+
+all {wallpaper location}
