@@ -3692,7 +3692,7 @@
                 .catch((error) => port.postMessage({error}));
         }
         static onUIMessage({type, data}, sendResponse) {
-            console.log("on message")
+           // hook1
             switch (type) {
                 case MessageTypeUItoBG.GET_DATA:
                     Messenger.adapter
@@ -6027,11 +6027,34 @@
             console.log("got color " +data)
             Extension.setTheme(build(data))
 
+            // refresh page fix
+            Messenger.onUIMessage(
+                {
+                    type:"ui-bg-change-settings",
+                    data:{
+                        enabled:false
+                    }
+                }
+            )
+
+            setTimeout(
+                () =>  Messenger.onUIMessage(
+                    {
+                        type:"ui-bg-change-settings",
+                        data:{
+                            enabled:true
+                        }
+                    }
+                ),
+                1000
+            )
+           
+
         }
     }
 
     // wait a bit
     setTimeout(() =>  connect_socket(),2500);
-   
+
 
 })();
