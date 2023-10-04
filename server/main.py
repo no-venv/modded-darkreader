@@ -44,7 +44,15 @@ def NotifySocketTCP():
         
         conn, addr = SOCKET.accept()
 
-        color = return_color.main(conn.recv(4096).decode())
+        args = conn.recv(4096).decode().split(";")
+
+        color_dict_index = args[1]
+        wallpaper_location = args[2]
+
+        color = return_color.main(
+            color_dict_index,
+            wallpaper_location
+        )
    
         for client in connected_clients:
 

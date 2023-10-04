@@ -4,11 +4,11 @@
 
 """
 
-def main(wallpaper):
+def main(color,wallpaper):
     
     import pywal
 
-    colors = pywal.colors.get(wallpaper)
+    colors = pywal.colors.get(wallpaper,backend="haishoku")
     
-    return colors["colors"]["color2"]
+    return colors["colors"]["color"+color]
     

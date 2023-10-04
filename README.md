@@ -31,7 +31,9 @@ the server is located in the "server" folder
 you need to:
 
 - get python & pip
-- pip install simple-websocket-server & pip install pywal
+- pip install simple-websocket-server 
+- pip install pywal
+- pip install haishoku
 - python main.py (you might want to make it run on startup)
 - smile that your browser is pretty
 
@@ -47,8 +49,17 @@ idk how you guys configure your wallpapers so i've decided that you'd need to ma
 
 -> connect to tcp socket 9484 on 127.0.0.1 
 
--> send wallpaper location on disk 
+-> send both color index & wallpaper location on disk
 
+   - color indexs start at 0 to 15
+   
+   - an example of what to send to the tcp socket:
+
+        color index ; wallpaper location
+
+        0;/home/me/wallpaper.png
+
+        
 -> **close socket**
 
 -> server gets the wallpaper location and inputs it in pywal

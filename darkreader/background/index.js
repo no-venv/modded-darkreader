@@ -5994,8 +5994,6 @@
     // MOD1
     function build(color){
         return {
-            mode: 1,
-            sepia: 100,
             engine: ThemeEngine.dynamicTheme,
             immediateModify: false,
             matrix_color : color,
