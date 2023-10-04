@@ -66,3 +66,9 @@ idk how you guys configure your wallpapers so i've decided that you'd need to ma
 
 -> pywal outputs hex colour and brodcasts to connected browsers
 
+
+**actually just use wraper.py to do it all for you**
+
+wraper.py positional arguments:
+
+{color index} {wallpapr location}
