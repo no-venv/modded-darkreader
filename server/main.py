@@ -2,21 +2,29 @@ import socket
 import return_color
 from simple_websocket_server import WebSocketServer,WebSocket
 from threading import Thread
+
 connected_clients = []
 
 class SocketServer(WebSocket):
 
     def handle(self):
-        return return_color.main()
+        pass
     
     def connected(self):
         connected_clients.append(self)
-        self.send_message(return_color.main())
     
     def handle_close(self):
         connected_clients.remove(self)
  
 def NotifySocketTCP():
+
+    """
+    
+        this socket is for sending the wallpaper location
+        so that pywal can generate a palette and send it 
+        to connected browsers
+    
+    """
 
     HOST = "127.0.0.1"
     PORT = 9484 
@@ -26,16 +34,18 @@ def NotifySocketTCP():
     SOCKET.listen()
 
     while True:
+
         """
 
             accept socket and fire to all connected clients of new 
             wallpaper colour change
         
         """
+        
         conn, addr = SOCKET.accept()
 
-        color = return_color.main()
-        
+        color = return_color.main(conn.recv(4096).decode())
+   
         for client in connected_clients:
 
             client.send_message(color)

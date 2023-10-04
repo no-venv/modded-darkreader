@@ -31,7 +31,7 @@ the server is located in the "server" folder
 you need to:
 
 - get python & pip
-- pip install simple-websocket-server
+- pip install simple-websocket-server & pip install pywal
 - python main.py (you might want to make it run on startup)
 - smile that your browser is pretty
 
@@ -39,10 +39,19 @@ ports that are used:
 
 9483 - websocket
 
-9484 - tcp port for the server to update the colour 
+9484 - tcp port for the server to receive the wallpaper location
 
-only connecting to the socket is enough to trigger an colour update to the browser, you don't need to send anything to the tcp socket
+idk how you guys configure your wallpapers so i've decided that you'd need to manually implement it
 
-the return_color.py script currently works on linux systems w pywal installed
+-> get wallpaper location 
 
-you can freely modify the script for your operating system as long it returns a hex string!
+-> connect to tcp socket 9484 on 127.0.0.1 
+
+-> send wallpaper location on disk 
+
+-> **close socket**
+
+-> server gets the wallpaper location and inputs it in pywal
+
+-> pywal outputs hex colour and brodcasts to connected browsers
+
