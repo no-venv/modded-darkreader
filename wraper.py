@@ -5,7 +5,7 @@ def send(color,wal):
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect(("127.0.0.1",9484))
-    s.send((color+";"+wal).encode())
+    s.send((str(color)+";"+wal).encode())
     s.close()
 
 if __name__ == "__main__":
