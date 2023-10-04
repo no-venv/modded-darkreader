@@ -46,8 +46,8 @@ def NotifySocketTCP():
 
         args = conn.recv(4096).decode().split(";")
 
-        color_dict_index = args[1]
-        wallpaper_location = args[2]
+        color_dict_index = args[0]
+        wallpaper_location = args[1]
 
         color = return_color.main(
             color_dict_index,

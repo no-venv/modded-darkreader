@@ -1,10 +1,12 @@
 import socket
 import sys
 
-color = sys.argv[1]
-wallpaper_loc = sys.argv[2]
+def send(color,wal):
 
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect(("127.0.0.1",9484))
-s.send((color+";"+wallpaper_loc).encode())
-s.close()
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.connect(("127.0.0.1",9484))
+    s.send((color+";"+wal).encode())
+    s.close()
+
+if __name__ == "__main__":
+    send(sys.argv[1],sys.argv[2])
