@@ -46,20 +46,23 @@ def NotifySocketTCP():
 
         args = conn.recv(4096).decode().split(";")
 
-        color_dict_index = args[0]
-        wallpaper_location = args[1]
+        try:
+            color_dict_index = args[0]
+            wallpaper_location = args[1]
 
-        color = return_color.main(
-            color_dict_index,
-            wallpaper_location
-        )
-   
-        for client in connected_clients:
+            color = return_color.main(
+                color_dict_index,
+                wallpaper_location
+            )
+    
+            for client in connected_clients:
 
-            client.send_message(color)
-
+                client.send_message(color)
+        except:
+            pass
+        
         conn.close()
-  
+    
 
 server = WebSocketServer("127.0.0.1",9483,SocketServer)
 Thread(target=NotifySocketTCP).start()
