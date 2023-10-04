@@ -35,6 +35,13 @@ you need to:
 - python main.py (you might want to make it run on startup)
 - smile that your browser is pretty
 
+ports that are used:
+
+9483 - websocket
+
+9484 - tcp port for the server to update the colour 
+
+only connecting to the socket is enough to trigger an colour update to the browser, you don't need to send anything to the tcp socket
 
 the return_color.py script currently works on linux systems w pywal installed
 
