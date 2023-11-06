@@ -9,35 +9,36 @@ def hex_to_rgb(hexa):
 
 def main(color,wallpaper):
     
-    import pywal
+    from haishoku.haishoku import Haishoku
 
-    colors = pywal.colors.get(wallpaper,backend="haishoku")
+    colors = Haishoku.getPalette(wallpaper)
     
+    color_length = colors.__len__()
+
     if color == "all":
-        rgbcolors = []
 
         r = 0
         g = 0 
         b = 0
 
-        for color in colors["colors"].values():
+        for color in colors:
 
-           rgbcolors.append(hex_to_rgb(color[1:]))
-        
-        for color in rgbcolors:
+            r+= color[1]
+            g+= color[2]
+            b+= color[3]
 
-            r+= color[0]
-            g+= color[1]
-            b+= color[2]
-
-        color_len = len(rgbcolors)
-
-        r //= color_len
-        g //= color_len
-        b //= color_len
+        r //= color_length
+        g //= color_length
+        b //= color_length
 
         return '#{:02x}{:02x}{:02x}'. format(r, g, b)
-            
 
-    return colors["colors"]["color"+color]
+
+    selected_color = colors[ int(color) > color_length and color_length-1 or int(color) ]
+
+    r = selected_color[1][0]
+    g = selected_color[1][1]
+    b = selected_color[1][2]
+
+    return '#{:02x}{:02x}{:02x}'. format(r, g, b)
     
