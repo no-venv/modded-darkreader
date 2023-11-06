@@ -23,9 +23,9 @@ def main(color,wallpaper):
 
         for color in colors:
 
-            r+= color[1]
-            g+= color[2]
-            b+= color[3]
+            r+= color[1][0]
+            g+= color[1][1]
+            b+= color[1][2]
 
         r //= color_length
         g //= color_length
