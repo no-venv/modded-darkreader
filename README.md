@@ -32,7 +32,6 @@ you need to:
 
 - get python & pip
 - pip install simple-websocket-server 
-- pip install pywal
 - pip install haishoku
 - python main.py (you might want to make it run on startup)
 - smile that your browser is pretty
