@@ -1,5 +1,4 @@
 import socket
-import return_color
 from simple_websocket_server import WebSocketServer,WebSocket
 from threading import Thread
 
@@ -44,23 +43,11 @@ def NotifySocketTCP():
         
         conn, addr = SOCKET.accept()
 
-        args = conn.recv(4096).decode().split(";")
+        color = conn.recv(4096).decode()
 
-        try:
-            color_dict_index = args[0]
-            wallpaper_location = args[1]
+        for client in connected_clients:
+            client.send_message(color)
 
-            color = return_color.main(
-                color_dict_index,
-                wallpaper_location
-            )
-    
-            for client in connected_clients:
-
-                client.send_message(color)
-        except:
-            pass
-        
         conn.close()
     
 
