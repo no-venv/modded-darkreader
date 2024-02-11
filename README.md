@@ -46,12 +46,12 @@ ports that are used:
 
 you can use "interface.py" to interface with the server
 
-###  if you want to send a color to all connected browsers, simpily:
+###  if you want to send a color to all connected browsers, simply:
 
 python3 interface.py FF00FF
 
 ### if you want to extract the wallpaper color and send it to the server:
-### REQUIRES "haishoku"
+### (REQUIRES "haishoku")
 
 python3 interface.py /home/me/Pictures/whatever.png
 
