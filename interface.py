@@ -13,7 +13,7 @@ def send(color : str):
 def wallpaper_color(wallpaper : str):
 
     from haishoku.haishoku import Haishoku
-    color = Haishoku.getDominant(wallpaper)
+    color = Haishoku.getColorsMean(wallpaper)[2][1]
     return '{:02x}{:02x}{:02x}'.format(color[0],color[1],color[2])
 
 if __name__ == "__main__":
