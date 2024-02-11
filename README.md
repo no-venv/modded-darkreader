@@ -14,15 +14,21 @@ basically i edited the colour filter matrix (used for speia and grayscale filter
 
 ## how 2 install - browsers
 
-chrome ppl:
+### chrome:
+
+load the unpacked "darkreader" folder
 
 https://github.com/web-scrobbler/web-scrobbler/wiki/Install-an-unpacked-extension
 
-firefox ppl:
+
+### firefox:
+
 
 you need to install the developer edition of firefox first
 
-when you're done, make your way over to the `about:addons` page, click that gear icon and press load addon from file (zip "darkreader" folder first!)
+when you're done, make your way over to the `about:addons` page, click that gear icon and press load addon from file 
+
+load the "darkreader.zip" file
 
 ## how 2 install - server
 
