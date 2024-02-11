@@ -6021,7 +6021,7 @@
 
         wal_socket.onmessage = function(background){
 
-            let data = background.data.split("#")[1]
+            let data = background.data
             console.log("got color " +data)
             Extension.setTheme(build(data))
 

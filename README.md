@@ -22,7 +22,7 @@ firefox ppl:
 
 you need to install the developer edition of firefox first
 
-when you're done, make your way over to the `about:addons` page, click that gear icon and press load addon from file (zip darkreader folder!)
+when you're done, make your way over to the `about:addons` page, click that gear icon and press load addon from file (zip "darkreader" folder first!)
 
 ## how 2 install - server
 
@@ -32,46 +32,32 @@ you need to:
 
 - get python & pip
 - pip install simple-websocket-server 
-- pip install haishoku
-- python main.py (you might want to make it run on startup)
+- pip install haishoku (optional)
+- python main.py (you might want to make it run on startup!)
 - smile that your browser is pretty
 
 ports that are used:
 
 9483 - websocket
 
-9484 - tcp port for the server to receive the wallpaper location
+9484 - tcp port for the server to receive the wallpaper color
 
-idk how you guys configure your wallpapers so i've decided that you'd need to manually implement it
+## interfacing with the server
 
--> get wallpaper location 
+you can use "interface.py" to interface with the server
 
--> connect to tcp socket 9484 on 127.0.0.1 
+###  if you want to send a color to all connected browsers, simpily:
 
--> send both color index & wallpaper location on disk
+python3 interface.py FF00FF
 
-   - color indexs start at 0 to 15
-   
-   - an example of what to send to the tcp socket:
+### if you want to extract the wallpaper color and send it to the server:
+### REQUIRES "haishoku"
 
-        color index ; wallpaper location
+python3 interface.py /home/me/Pictures/whatever.png
 
-        0;/home/me/wallpaper.png
+### if you want to do it manually:
 
-        
--> **close socket**
+- connect to tcp socket at "127.0.0.1:9484"
+- send a color hex string (without the #)
+- done
 
--> server gets the wallpaper location and inputs it in pywal
-
--> pywal outputs hex colour and brodcasts to connected browsers
-
-
-**actually just use wraper.py to do it all for you**
-
-wraper.py positional arguments:
-
-{color index} {wallpapr location}
-
-.. or if you wan to take account for all colors
-
-all {wallpaper location}
